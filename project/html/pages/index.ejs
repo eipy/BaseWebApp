@@ -6,32 +6,40 @@
 <body>
   <!-- the classes 'page-header' and 'btn btn-dark' create bootstrap components.  -->
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
-  <div class="page-header">
+
+	<div class="page-header">
     
-    <% include ../helpers/navbar %>
-  
-    <h1>Learning with Hubspot</h1>
-  </div>
+		<% include ../helpers/navbar %>
+		<h1>Weather check</h1>
 
-  <p>Another update!</p>
+	</div>
 
-  <div class="city">
+	<div class="input-div">
 
+		<input class="search" type="text" placeholder="Enter city name">
+		<button type="button" onClick="searchWeather()"> Search </button>
+	</div>
+
+	<div class="city">  
+	</div>
+
+	<div class="temp">  
+	</div>
+
+	<div class="humidity"> 
+	</div>
+
+	<div class="rain">
+	</div>
+
+	<div class="error-message">
+	</div>
+
+	<div class="login-div">
 		
+		<button onClick="handleSignIn()"> Login </button>
 
-  </div>
-
-  <div class="temp">
-  
-	
-
-  </div>
-
-  
-
-  <button onClick="showPicture()" class="btn btn-dark">Click me</button>
-
-  <div id="image"></div>
+	</div>
   
 </body>
 
