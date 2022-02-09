@@ -25,6 +25,8 @@
 <script type="module">
 
 	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+	import { GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
+	import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
 	
 	const firebaseConfig = {
 		apiKey: "<%= process.env.FIREBASE_API_KEY %>",
@@ -39,6 +41,7 @@
 
 	//Initialize Firebase
 	const app = initializeApp(firebaseConfig);
+	firebase.initializeApp(firebaseConfig);
 
 </script>
 

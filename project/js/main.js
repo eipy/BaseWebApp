@@ -1,7 +1,8 @@
+import { GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
 
 $(document).ready(function(){
  getWeather();
-})
+});
 
 function getWeather(searchQuery) {
  var url = "https://api.openweathermap.org/data/2.5/weather?q="+searchQuery+"&units=metric&appid="+apiKey;
@@ -30,7 +31,9 @@ function searchWeather() {
 }
 
 function handleSignIn() {
- var provider = new firebase.auth.GoogleAuthProvider();
+
+// var provider = new firebase.auth.GoogleAuthProvider();
+ const provider = new GoogleAuthProvider();
 
  firebase.auth().signInWithPopup(provider).then(function(result) {
 	//this gives you a google access token. You can use it to access the Google API. 
